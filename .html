@@ -3,17 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Goals Tracker</title>
+  <title>Goal Tracker with Calendar</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="container">
-    <h1>🌞 Daily Goals</h1>
-    <form id="goal-form">
-      <input type="text" id="goal-input" placeholder="Enter a goal..." required />
-      <button type="submit">Add</button>
-    </form>
-    <ul id="goal-list"></ul>
+    <!-- 🌙 CALENDAR -->
+    <div class="calendar">
+      <div class="header">
+        <button id="prev">&lt;</button>
+        <h2 id="month-year"></h2>
+        <button id="next">&gt;</button>
+      </div>
+      <div class="weekdays">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+
+    <!-- ✅ GOAL TRACKER -->
+    <div class="goal-tracker">
+      <h2>Daily Goal Tracker</h2>
+      <input type="text" id="goalInput" placeholder="Enter your goal..." />
+      <button onclick="addGoal()">Add Goal</button>
+      <ul id="goalList"></ul>
+    </div>
   </div>
 
   <script src="script.js"></script>
